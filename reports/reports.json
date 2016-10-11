@@ -249,11 +249,11 @@
         "dimensions": ["rt:pagePath", "rt:pageTitle"],
         "metrics": ["rt:activeUsers"],
         "sort": "-rt:activeUsers",
-        "max-results": "20"
+        "max-results": "25"
       },
       "meta": {
         "name": "Top Pages (Live)",
-        "description": "The top 20 pages, measured by active onsite users, for all sites."
+        "description": "The top 25 pages, measured by active onsite users, for all sites."
       }
     },
     {
@@ -265,11 +265,11 @@
         "start-date": "7daysAgo",
         "end-date": "yesterday",
         "sort": "-ga:pageviews",
-        "max-results": "20"
+        "max-results": "25"
       },
       "meta": {
         "name": "Top Pages (7 Days)",
-        "description": "Last week's top 20 pages, measured by page views, for all sites."
+        "description": "Last week's top 25 pages, measured by page views, for all sites."
       }
     },
     {
@@ -292,11 +292,43 @@
         "start-date": "30daysAgo",
         "end-date": "yesterday",
         "sort": "-ga:pageviews",
-        "max-results": "20"
+        "max-results": "25"
       },
       "meta": {
         "name": "Top Pages (30 Days)",
-        "description": "Last 30 days' top 20 pages, measured by page views, for all sites."
+        "description": "Last 30 days' top 25 pages, measured by page views, for all sites."
+      }
+    },
+    {
+      "name": "top-pages-90-days",
+      "frequency": "daily",
+      "query": {
+        "dimensions": ["ga:hostname", "ga:pagePath", "ga:pageTitle"],
+        "metrics": ["ga:pageviews"],
+        "start-date": "90daysAgo",
+        "end-date": "yesterday",
+        "sort": "-ga:pageviews",
+        "max-results": "25",
+      },
+      "meta": {
+        "name": "Top Pages (90 Days)",
+        "description": "Last 90 days' top 25 pages, measured by page views, for all sites."
+      }
+    },
+    {
+      "name": "top-pages-365-days",
+      "frequency": "daily",
+      "query": {
+        "dimensions": ["ga:hostname", "ga:pagePath", "ga:pageTitle"],
+        "metrics": ["ga:pageviews"],
+        "start-date": "365daysAgo",
+        "end-date": "yesterday",
+        "sort": "-ga:pageviews",
+        "max-results": "25",
+      },
+      "meta": {
+        "name": "Top Pages (365 Days)",
+        "description": "Last 365 days' top 25 pages, measured by page views, for all sites."
       }
     },
     {
